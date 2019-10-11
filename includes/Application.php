@@ -3,6 +3,8 @@ declare(strict_types = 1);
 
 namespace Mireiawen\ParkMan;
 
+use Mireiawen\ParkMan\Routes\GetCompanies;
+use Mireiawen\ParkMan\Routes\GetCountries;
 use Mireiawen\ParkMan\Routes\GetGaragesByCompany;
 use Mireiawen\ParkMan\Routes\GetGaragesByCountry;
 
@@ -42,12 +44,22 @@ class Application
 		
 		switch ($request)
 		{
+		case 'GetAllCompanies':
+			$route = new GetCompanies($this);
+			break;
+		
+		case 'GetAllCountries':
+			$route = new GetCountries($this);
+			break;
+		
 		case 'GetGaragesByCompany':
 			$route = new GetGaragesByCompany($this);
 			break;
+		
 		case 'GetGaragesByCountry':
 			$route = new GetGaragesByCountry($this);
 			break;
+		
 		default:
 			$this->SendError(404, 'Invalid request');
 			return;

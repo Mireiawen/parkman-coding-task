@@ -10,7 +10,7 @@ The schema is split into 4 tables, specifying countries, currencies, companies a
 ## Code
 Code is written to run on PHP 7.3, and JSON functions require the 7.3. No external libraries or frameworks are used.
 
-The code is split to have database models separate from the views. Although there is only one view at the moment that lists garages, adding more for example country or company listing should be relatively easy.
+The code is split to have database models separate from the views. 
 
 Requests will return HTTP response code and JSON error message in case of errors.
 
@@ -34,6 +34,12 @@ Example commands to run in the Docker environment, where database is expected to
 
 ## URLs
 Just using HTTP GET to make it simple to test in this case. Reading JSON or such format should be trivial but requires bit more than just browser and URL to send a request. Requests are case sensitive.
+
+### Get companies
+* http://server/?request=GetAllCompanies
+
+### Get countries
+* http://server/?request=GetAllCountries
 
 ### Get garages by company
 * http://server/?request=GetGaragesByCompany&company=1
