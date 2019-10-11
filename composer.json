@@ -1,0 +1,23 @@
+{
+	"license": "",
+	
+	"name": "mireiawen/parkman",
+	"description": "Parkman coding assignment",
+	"type": "project",
+	"authors": [
+		{
+			"name": "Mira Manninen",
+			"email": "mir@mireiawen.net"
+		}
+	],
+	"require": {
+		"php": ">=7.3.0",
+		"ext-mysqli": "*",
+		"ext-json": "*"
+	},
+	"autoload": {
+		"psr-4": {
+			"Mireiawen\\ParkMan\\": "includes"
+		}
+	}
+}
