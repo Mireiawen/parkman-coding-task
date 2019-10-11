@@ -7,6 +7,7 @@ use Mireiawen\ParkMan\Routes\GetCompanies;
 use Mireiawen\ParkMan\Routes\GetCountries;
 use Mireiawen\ParkMan\Routes\GetGaragesByCompany;
 use Mireiawen\ParkMan\Routes\GetGaragesByCountry;
+use Mireiawen\ParkMan\Routes\GetGaragesByLocation;
 
 /**
  * Main Application class
@@ -58,6 +59,10 @@ class Application
 		
 		case 'GetGaragesByCountry':
 			$route = new GetGaragesByCountry($this);
+			break;
+		
+		case 'GetGaragesByLocation':
+			$route = new GetGaragesByLocation($this);
 			break;
 		
 		default:

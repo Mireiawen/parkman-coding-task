@@ -47,3 +47,6 @@ Just using HTTP GET to make it simple to test in this case. Reading JSON or such
 
 ### Get garages by country
 * http://server/?request=GetGaragesByCountry&country=1
+
+### Get garages by location
+* http://server/?request=GetGaragesByLocation&latitude1=60.150971&longitude1=24.874034&latitude2=60.190420&longitude2=25.005139
